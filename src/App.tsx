@@ -1,19 +1,17 @@
+import { useEffect, useState } from 'react'
 import './App.css'
-import logo from './assets/logo.jpeg'
+import InputArea from './components/inputArea'
 
 function App() {
+  const [inputList, setInputList] = useState<string[]>([])
+
+  useEffect(() => {
+    console.log(inputList)
+  }, [inputList])
 
   return (
     <>
-      <div>
-        <a href="https://github.com/Gu1assis/randomize.me" target="_blank">
-          <img src={logo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>This is a Work in Progress</h1>
-      <p className="read-the-docs">
-        Uma coisa de cada vez
-      </p>
+    <InputArea onValueChange={setInputList} />
     </>
   )
 }

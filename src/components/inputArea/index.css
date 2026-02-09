@@ -1,0 +1,43 @@
+/* InputArea textarea styles using global color variables from src/styles/colors.css */
+.input-area {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.input-area label {
+	font-size: 0.9rem;
+	color: var(--color-shadow-grey);
+}
+
+.input-area textarea {
+	width: 100%;
+	min-height: 160px;
+	padding: 12px 14px;
+	border-radius: 10px;
+	border: 1px solid rgba(26,27,37,0.08);
+	background-color: var(--color-white);
+	color: var(--color-shadow-grey);
+	font-size: 0.95rem;
+	line-height: 1.4;
+	resize: vertical;
+	box-shadow: 0 6px 18px rgba(26,27,37,0.08), inset 0 1px 0 rgba(255,255,255,0.02);
+	transition: box-shadow 180ms ease, transform 120ms ease, border-color 120ms ease;
+}
+
+.input-area textarea:focus {
+	outline: none;
+	border-color: var(--color-royal-purple);
+	box-shadow: 0 10px 30px rgba(115,29,216,0.12);
+	transform: translateY(-1px);
+}
+
+.input-area textarea::placeholder {
+	color: rgba(26,27,37,0.45);
+}
+
+.input-area .hint {
+	font-size: 0.8rem;
+	color: var(--color-pine);
+}
+

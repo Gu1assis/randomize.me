@@ -1,0 +1,15 @@
+/* Global color variables for the app */
+:root {
+  --color-shadow-grey: #1A1B25;
+  --color-royal-purple: #731DD8;
+  --color-scarlet-rush: #DA2C38;
+  --color-white: #EBF2FA;
+  --color-pine: #357266;
+}
+
+/* Optional: small helper classes for quick usage */
+.bg-shadow-grey { background-color: var(--color-shadow-grey); }
+.text-royal-purple { color: var(--color-royal-purple); }
+.text-scarlet-rush { color: var(--color-scarlet-rush); }
+.text-pine { color: var(--color-pine); }
+.text-white { color: var(--color-white); }
