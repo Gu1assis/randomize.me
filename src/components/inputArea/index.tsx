@@ -1,27 +1,44 @@
-import type { ChangeEvent } from "react"
-import './index.css'
+import { useState } from 'react';
+import './index.css';
 
 interface InputAreaProps {
-    onValueChange: (value: string[]) => void
+  onValueChange: (values: string[]) => void;
+  onSettingsClick: () => void;
 }
 
-const InputArea = ({ onValueChange }: InputAreaProps) => {
+export default function InputArea({ onValueChange, onSettingsClick }: InputAreaProps) {
+  const [text, setText] = useState('');
 
-    const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
-        const textAreaInput = event.target.value
-        const lines = textAreaInput
-            .split("\n")
-            .map(line => line.trim())
-            .filter(line => line.length > 0)
-        onValueChange(lines)
-    }
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const value = e.target.value;
+    setText(value);
 
-    return (
-        <div className="input-area">
-            <label>Coloque aqui sua lista:</label>
-            <textarea onChange={handleChange} placeholder="Digite aqui sua Lista" />
-        </div>
-    )
+    const list = value
+      .split('\n')
+      .map(s => s.trim())
+      .filter(Boolean);
+
+    onValueChange(list);
+  };
+
+  return (
+    <div className="input-area-container">
+      <div className="input-area-header">
+        <h2>Lista de nomes</h2>
+        <button 
+          className="settings-btn"
+          onClick={onSettingsClick}
+          title="Configurações"
+        >
+          ⚙️
+        </button>
+      </div>
+
+      <textarea
+        value={text}
+        onChange={handleChange}
+        placeholder="Insira os nomes, um por linha..."
+      />
+    </div>
+  );
 }
-
-export default InputArea

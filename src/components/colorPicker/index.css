@@ -1,0 +1,40 @@
+.color-picker-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.color-picker-label {
+  color: #EBF2FA;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.color-picker-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.color-picker-input {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #357266;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.color-picker-input:hover {
+  border-color: #DA2C38;
+}
+
+.color-picker-value {
+  color: #EBF2FA;
+  font-family: monospace;
+  font-size: 0.9rem;
+  background-color: #1A1B25;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #357266;
+}

@@ -1,43 +1,60 @@
-/* InputArea textarea styles using global color variables from src/styles/colors.css */
-.input-area {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
+.input-area-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
 }
 
-.input-area label {
-	font-size: 0.9rem;
-	color: var(--color-shadow-grey);
+.input-area-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #DA2C38;
 }
 
-.input-area textarea {
-	width: 100%;
-	min-height: 160px;
-	padding: 12px 14px;
-	border-radius: 10px;
-	border: 1px solid rgba(26,27,37,0.08);
-	background-color: var(--color-white);
-	color: var(--color-shadow-grey);
-	font-size: 0.95rem;
-	line-height: 1.4;
-	resize: vertical;
-	box-shadow: 0 6px 18px rgba(26,27,37,0.08), inset 0 1px 0 rgba(255,255,255,0.02);
-	transition: box-shadow 180ms ease, transform 120ms ease, border-color 120ms ease;
+.input-area-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #EBF2FA;
+  font-weight: 600;
 }
 
-.input-area textarea:focus {
-	outline: none;
-	border-color: var(--color-royal-purple);
-	box-shadow: 0 10px 30px rgba(115,29,216,0.12);
-	transform: translateY(-1px);
+.settings-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
-.input-area textarea::placeholder {
-	color: rgba(26,27,37,0.45);
+.settings-btn:hover {
+  background-color: #DA2C38;
+  opacity: 0.8;
 }
 
-.input-area .hint {
-	font-size: 0.8rem;
-	color: var(--color-pine);
+textarea {
+  padding: 12px;
+  border: 2px solid #357266;
+  border-radius: 6px;
+  background-color: #EBF2FA;
+  color: #1A1B25;
+  font-size: 1rem;
+  font-family: monospace;
+  resize: vertical;
+  min-height: 300px;
+  transition: border-color 0.2s ease;
 }
 
+textarea:focus {
+  outline: none;
+  border-color: #DA2C38;
+}
+
+textarea::placeholder {
+  color: #731DD8;
+  opacity: 0.6;
+}

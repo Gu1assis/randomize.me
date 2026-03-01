@@ -8,6 +8,10 @@ For those who need a fun way to choose a random name from a list
 - Adicionar animações bonitinhas e melhorar interface
 - Eventos aleatórios: add possibilidade da roleta dar uma girada extra, voltar um pouco pra trás, etc
 
+## External Libs
+
+[react-custom-roulette](https://www.npmjs.com/package/react-custom-roulette)
+
 
 # Color Palette
 
